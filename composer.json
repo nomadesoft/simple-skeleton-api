@@ -22,5 +22,11 @@
             "email": "jesu.farfan23@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "scripts": {
+        "run": [
+            "echo 'Started web server on http://localhost:8888'",
+            "php -S 0.0.0.0:8080 -t web"
+        ]
+    }
 }
