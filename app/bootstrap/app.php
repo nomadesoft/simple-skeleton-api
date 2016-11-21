@@ -8,6 +8,9 @@ $app = new Silex\Application();
 // Register and load ConfigServiceProvider
 $app->register(new App\Providers\ConfigServiceProvider());
 
+// Register and load Routes
+$app->register(new App\Providers\RouteServiceProvider());
+
 // Register Providers
 $app->register(new Silex\Provider\ServiceControllerServiceProvider());
 

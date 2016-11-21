@@ -1,0 +1,9 @@
+index:
+    path: "/"
+    method: "GET"
+    controller: "App\\Controllers\\IndexController@indexAction"
+
+hello:
+    path: "/{name}"
+    method: "GET"
+    controller: "App\\Controllers\\IndexController@helloAction"
