@@ -5,6 +5,14 @@ namespace App\Console;
 use Symfony\Component\Console\Application as ConsoleApplication;
 use Symfony\Component\Console\Input\InputInterface;
 
+/**
+ * Application
+ *
+ * @category Command
+ * @package  Console
+ * @author   Jesus Farfan <jesu.farfan23@gmail.com>
+ * @license  MIT.
+ */
 class Application extends ConsoleApplication
 {
     /**
@@ -18,7 +26,8 @@ class Application extends ConsoleApplication
      */
     protected function getCommandName(InputInterface $input) : string
     {
-        return 'list';
+        $command = $input->getFirstArgument() ?? 'help';
+        return $command;
     }
 
     /**
@@ -43,7 +52,6 @@ class Application extends ConsoleApplication
     public function getDefinition()
     {
         $inputDefinition = parent::getDefinition();
-        $inputDefinition->setArguments();
         return $inputDefinition; 
     }
 }
