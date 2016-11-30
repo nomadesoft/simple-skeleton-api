@@ -6,7 +6,9 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 $app = new Silex\Application();
 
 // Register and load ConfigServiceProvider
-$app->register(new App\Providers\ConfigServiceProvider());
+$app->register(new App\Providers\ConfigServiceProvider('config'));
+
+$app['debug'] = $app['config']['app']['debug'] ?? false;
 
 // Register and load Routes
 $app->register(new App\Providers\RouteServiceProvider());
