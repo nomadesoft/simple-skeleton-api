@@ -8,20 +8,54 @@ use Pimple\ServiceProviderInterface;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Yaml\Exception\ParseException;
 
+/**
+ * ConfigServiceProvider
+ *
+ * @category  Providers
+ * @package   Providers
+ * @author    Jesus Farfan <jesu.farfan23@gmail.com>
+ * @copyright Jesus Farfan
+ * @license   MIT 
+ * @link      https://github.com/jesusfar
+ */
 class ConfigServiceProvider implements ServiceProviderInterface
 {
+    /**
+     * @var string Prefix config
+     */
     private $prefix;
 
+    /**
+     * __construct
+     *
+     * @param string $prefix Prefix config
+     *
+     * @return void
+     */
     public function __construct(string $prefix = 'config')
     {
         $this->prefix = $prefix;
     }
 
+    /**
+     * boot serviceprovider
+     *
+     * @param Application $app App object inyected
+     *
+     * @return void
+     */
     public function boot(Application $app)
     {
 
     }
 
+    /**
+     * register serviceprovider
+     *
+     * @param Application $app App object inyected
+     *
+     * @return void
+     */
     public function register(Container $app)
     {
         $this->loadConfig($app);

@@ -9,10 +9,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * CompileCommand
  *
- * @category Command
- * @package  Console
- * @author   Jesus Farfan <jesu.farfan23@gmail.com>
- * @license  MIT.
+ * @category  Controllers
+ * @package   Controllers
+ * @author    Jesus Farfan <jesu.farfan23@gmail.com>
+ * @copyright Jesus Farfan
+ * @license   MIT 
+ * @link      https://github.com/jesusfar
  */
 class CompileCommand extends Command
 {

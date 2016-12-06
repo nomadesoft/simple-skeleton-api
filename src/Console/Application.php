@@ -6,12 +6,16 @@ use Symfony\Component\Console\Application as ConsoleApplication;
 use Symfony\Component\Console\Input\InputInterface;
 
 /**
- * Application
+ * Application 
  *
- * @category Command
- * @package  Console
- * @author   Jesus Farfan <jesu.farfan23@gmail.com>
- * @license  MIT.
+ * Application class console
+ *
+ * @category  Controllers
+ * @package   Controllers
+ * @author    Jesus Farfan <jesu.farfan23@gmail.com>
+ * @copyright Jesus Farfan
+ * @license   MIT 
+ * @link      https://github.com/jesusfar
  */
 class Application extends ConsoleApplication
 {
